@@ -9,7 +9,7 @@ export default function AffiliatePortal() {
           <h2>O centro de comando dos seus lucros</h2>
           <p>
             Esqueça planilhas confusas. Nosso Novo Portal do Parceiro entrega controle total, 
-            em tempo real, sobre suas vendas, links gerados e comissões a receber.
+            em tempo real, sobre suas vendas, número de clicks no seu link, taxa de conversão e comissões a receber.
           </p>
         </div>
 

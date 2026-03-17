@@ -11,9 +11,9 @@ export default function HeroSection({ onOpenModal }) {
         </h1>
         
         <p>
-          Agências de viagens, seguradoras e empresas de turismo: parem de deixar dinheiro na mesa. 
+          Pare de deixar dinheiro na mesa! 
           Monetize sua base atual de clientes oferecendo conectividade digital instantânea. 
-          Você indica, fatura alto e nossa equipe cuida de todo o resto. Nossa responsabilidade o atendimento do cliente desde as dúvidas no atendimento até o suporte pós-venda.
+          Você indica para seu cliente comprar nosso eSIM, fatura alto com comissões e nossa equipe cuida de todo o resto. Temos responsabilidade com todo o atendimento do cliente desde as dúvidas no atendimento até o suporte pós-venda.
         </p>
         
         <button className="btn-cta" onClick={onOpenModal}>
