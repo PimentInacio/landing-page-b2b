@@ -1,0 +1,220 @@
+/* Importando a fonte Montserrat (Regular, SemiBold, Bold e ExtraBold) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Paleta de Cores da eSIMs */
+  --color-primary: #512292; /* Roxo principal da marca */
+  --color-dark: #1A1A1A;    /* Para textos escuros e títulos */
+  --color-light: #F8F9FA;   /* Para fundos suaves */
+  --color-white: #FFFFFF;
+  --color-success: #10B981; /* Para mensagens de sucesso no formulário */
+
+  /* Tipografia */
+  --font-main: 'Montserrat', sans-serif;
+}
+
+/* Reset básico e aplicação global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Padronização de Títulos (Montserrat Extrabold) */
+h1, h2, h3, h4 {
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+/* Padrão para Botões Base */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* --- ESTILOS DO MODAL E FORMULÁRIO --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-header h2 {
+  color: var(--color-white);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.modal-header p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4A4A4A;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #9CA3AF;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: var(--font-main);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+}
+
+select.form-input {
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: #6B7280;
+  margin-top: 5px;
+}
+
+.checkbox-group input {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.checkbox-group a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 16px;
+}
+
+/* --- ESTILOS DA HERO SECTION --- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #4A4A4A;
+}
