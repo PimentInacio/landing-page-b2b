@@ -1,16 +1,21 @@
-/* Importando a fonte Montserrat (Regular, SemiBold, Bold e ExtraBold) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+/* Importando a fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Paleta de Cores da eSIMs */
-  --color-primary: #512292; /* Roxo principal da marca */
-  --color-dark: #1A1A1A;    /* Para textos escuros e títulos */
-  --color-light: #F8F9FA;   /* Para fundos suaves */
+  /* Paleta Oficial eSIMs */
+  --color-primary: #512292; 
+  --color-primary-light: #F4EFFF; /* Fundo circular dos ícones */
+  --color-primary-hover: #3E1A70;
+  --color-dark: #1A1A1A;    
+  --color-text: #4A4A4A;
   --color-white: #FFFFFF;
-  --color-success: #10B981; /* Para mensagens de sucesso no formulário */
+  --color-success: #10B981; 
+  --color-border: #EAE2F8; /* Borda roxa bem clarinha para os cards */
 
-  /* Tipografia */
   --font-main: 'Montserrat', sans-serif;
+  
+  /* Gradiente premium para fundos */
+  --bg-gradient: linear-gradient(135deg, #F9F5FF 0%, #FFFFFF 100%);
 }
 
 /* Reset básico e aplicação global */
@@ -22,35 +27,258 @@
 
 body {
   font-family: var(--font-main);
-  background-color: var(--color-light);
-  color: var(--color-dark);
+  background: var(--color-white);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   min-height: 100vh;
 }
 
-/* Padronização de Títulos (Montserrat Extrabold) */
+/* Padronização de Títulos */
 h1, h2, h3, h4 {
   font-weight: 800;
   color: var(--color-primary);
   line-height: 1.2;
 }
 
-/* Padrão para Botões Base */
+/* --- BOTÕES --- */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-main);
   font-weight: 700;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(81, 34, 146, 0.25);
+}
+
+.btn-large {
+  font-size: 1.1rem;
+  padding: 18px 40px;
+  box-shadow: 0 10px 20px rgba(81, 34, 146, 0.3);
+}
+
+.btn-large:hover {
+  box-shadow: 0 15px 25px rgba(81, 34, 146, 0.4);
+}
+
+/* NOVO: Botão Verde para estourar no fundo roxo da Hero */
+.btn-cta {
+  background-color: var(--color-success);
+  color: #FFFFFF;
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #059669; /* Verde mais escuro no hover */
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(16, 185, 129, 0.4);
+}
+
+/* --- HERO SECTION (DARK PREMIUM) --- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2A1052 100%);
+}
+
+.hero-content {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #EAE2F8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+  color: var(--color-white);
+}
+
+.hero-section h1 .highlight {
+  color: #FF4D4D; /* Vermelho forte para estourar no fundo escuro e focar no lucro */
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 750px;
+  font-weight: 400;
+  color: #EAE2F8;
+}
+
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.hero-benefits span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+/* --- STORYTELLING & CARDS (MOBILE-FIRST PREMIUM) --- */
+.story-section {
+  padding: 80px 20px 0;
+  background-color: var(--color-white);
+}
+
+.story-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.story-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+.story-subtitle {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.highlight-text {
+  color: #EF4444; 
+}
+
+.story-flow {
+  display: flex;
+  flex-direction: column; /* Empilhado no mobile */
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.story-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(81, 34, 146, 0.04);
+  transition: all 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(81, 34, 146, 0.08);
+  border-color: rgba(81, 34, 146, 0.3);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.story-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--color-dark);
+}
+
+.story-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.money-gain {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: var(--color-primary-light);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+/* --- BANNER DE IMPACTO ROXO --- */
+.impact-banner {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column; /* Empilhado no mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.impact-item {
+  text-align: center;
+}
+
+.impact-item h3 {
+  color: var(--color-white);
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.impact-item p {
+  font-size: 1.1rem;
+  font-weight: 500;
   opacity: 0.9;
 }
 
@@ -126,7 +354,7 @@ h1, h2, h3, h4 {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #4A4A4A;
+  color: var(--color-text);
 }
 
 .input-wrapper {
@@ -196,25 +424,138 @@ select.form-input {
   font-size: 16px;
 }
 
-/* --- ESTILOS DA HERO SECTION --- */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* --- RESPONSIVIDADE DESKTOP (Tudo que muda telas >= 768px) --- */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 140px 20px 100px;
+  }
+  .hero-section h1 {
+    font-size: 3.8rem;
+  }
+  .hero-benefits {
+    gap: 40px;
+  }
+  
+  .story-section {
+    padding-bottom: 40px;
+  }
+  .story-flow {
+    flex-direction: row; /* Coloca os cards lado a lado no desktop */
+  }
+  .story-card {
+    flex: 1; /* Faz os cards dividirem o espaço igualmente */
+  }
+  
+  .impact-banner {
+    flex-direction: row; /* Coloca os números lado a lado no desktop */
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    transform: translateY(40px);
+  }
+}
+
+
+
+
+/* --- PORTAL DO AFILIADO E FINANÇAS --- */
+.portal-section {
   padding: 100px 20px;
-  max-width: 800px;
+  background-color: var(--color-light); /* Fundo cinza clarinho para destacar do card anterior */
+}
+
+.portal-container {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.hero-section h1 {
-  font-size: 3rem;
+.portal-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portal-header h2 {
+  font-size: 2.5rem;
+  color: var(--color-dark);
   margin-bottom: 20px;
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #4A4A4A;
+.portal-header p {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna no mobile */
+  gap: 30px;
+}
+
+.portal-card {
+  background: var(--color-white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(81, 34, 146, 0.08);
+}
+
+.portal-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.portal-card h3 {
+  font-size: 1.4rem;
+  color: var(--color-dark);
+  margin-bottom: 16px;
+}
+
+.portal-card p {
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1; /* Faz o botão/caixa inferior alinhar no final */
+}
+
+/* Destaque para o pagamento em PIX */
+.pix-highlight {
+  background-color: #ECFDF5;
+  color: #059669;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  border: 1px solid #A7F3D0;
+}
+
+@media (min-width: 768px) {
+  .portal-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  }
+}
+
+
