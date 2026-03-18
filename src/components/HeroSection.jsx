@@ -1,8 +1,8 @@
 import { CheckCircle2 } from 'lucide-react';
 
-export default function HeroSection() { // Removida a prop onOpenModal
+export default function HeroSection() { 
   return (
-    <section className="hero-section">
+    <section className="hero-section hero-spacing">
       <div className="hero-content">
         <span className="hero-badge">NOVO PROGRAMA DE PARCEIROS B2B</span>
         
@@ -16,7 +16,6 @@ export default function HeroSection() { // Removida a prop onOpenModal
           Você indica para seu cliente comprar nosso eSIM, fatura alto com comissões e nossa equipe cuida de todo o resto. Temos responsabilidade com todo o atendimento do cliente desde as dúvidas no atendimento até o suporte pós-venda.
         </p>
         
-        {/* Trocado de <button> para <a> com seu link */}
         <a 
           href="https://partners.esims.com.br/auth/signup" 
           className="btn-cta"

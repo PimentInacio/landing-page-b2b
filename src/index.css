@@ -733,3 +733,407 @@ select.form-input {
   .footer-container { grid-template-columns: 2fr 1fr 1fr 1fr; }
   .footer-bottom { flex-direction: row; justify-content: space-between; }
 }
+
+/* ========================================================= */
+/* --- ATUALIZAÇÃO ENTERPRISE (NOVOS COMPONENTES E MOCKUPS) --- */
+/* ========================================================= */
+
+/* --- HEADER FIXO --- */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+  padding: 15px 20px;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  letter-spacing: -1px;
+}
+
+.header-logo span {
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin-left: 4px;
+}
+
+.btn-header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-header:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Afastar a Hero para não ser engolida pelo header fixo */
+.hero-spacing {
+  padding-top: 150px;
+}
+
+/* --- PROVA SOCIAL (LOGOS) --- */
+.social-proof-section {
+  background-color: #F8FAFC;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.social-proof-section p {
+  color: #64748B;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.logo-placeholder {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #94A3B8;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.logo-placeholder:hover {
+  color: var(--color-primary);
+  filter: grayscale(0%);
+}
+
+/* --- CALCULADORA DE GANHOS --- */
+.calculator-section {
+  padding: 80px 20px;
+  background-color: var(--color-white);
+}
+
+.calculator-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.calculator-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+.calculator-text p {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.calculator-box {
+  background-color: var(--color-primary);
+  padding: 40px;
+  border-radius: 20px;
+  color: var(--color-white);
+  box-shadow: 0 20px 40px rgba(81, 34, 146, 0.2);
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.calc-clients {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #10B981;
+}
+
+.calc-slider {
+  width: 100%;
+  margin-bottom: 40px;
+  accent-color: #10B981;
+  cursor: pointer;
+  height: 8px;
+}
+
+.calc-result {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.calc-result span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.calc-result h3 {
+  font-size: 3rem;
+  color: var(--color-white);
+}
+
+.calc-btn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+/* --- MOCKUP DO PORTAL (MacBook Style) --- */
+.portal-layout-enterprise {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.portal-cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.macbook-mockup {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.macbook-screen {
+  background-color: #1A1A1A;
+  border-radius: 20px 20px 0 0;
+  padding: 12px 12px 0 12px;
+  border: 2px solid #333;
+  border-bottom: none;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.dashboard-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+.macbook-base {
+  height: 15px;
+  background: linear-gradient(to bottom, #e2e8f0 0%, #cbd5e1 100%);
+  border-radius: 0 0 16px 16px;
+  position: relative;
+}
+
+.macbook-base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: #94A3B8;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Responsividade Enterprise */
+@media (min-width: 992px) {
+  .calculator-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .portal-layout-enterprise {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* ========================================================= */
+/* --- MOCKUP DO PORTAL (MacBook 3D CSS Premium) --- */
+/* ========================================================= */
+
+.portal-layout-enterprise {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.portal-cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* O Brilho Verde (Glow) no fundo, estilo SaaS moderno */
+.portal-mockup-column {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.portal-mockup-column::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(255,255,255,0) 65%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Container do Notebook 3D */
+.laptop-3d-container {
+  perspective: 1200px; /* Profundidade do 3D */
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  z-index: 2;
+}
+
+.laptop-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  /* Ângulo Isométrico Fixo: Girado de lado e olhando um pouco de cima */
+  transform: rotateX(10deg) rotateY(-25deg) rotateZ(0deg);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Efeito magnético elegante no hover (MUITO sutil, só para interatividade) */
+.laptop-3d:hover {
+  transform: rotateX(5deg) rotateY(-20deg) rotateZ(0deg) scale(1.02);
+}
+
+/* Tampa do Notebook (A Tela) */
+.laptop-screen-3d {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62%; /* Proporção de tela larga */
+  background-color: #000;
+  border-radius: 12px 12px 0 0;
+  border: 3px solid #d1d5db; /* Alumínio externo */
+  box-shadow: 
+    inset 0 0 0 10px #111, /* Bezel (borda interna) preta */
+    0 10px 30px rgba(0,0,0,0.5); /* Sombra pesada da tampa */
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+/* A Câmera no topo do Bezel */
+.laptop-camera {
+  position: absolute;
+  top: -6px; /* Ajuste para ficar dentro do Bezel preto */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: #222;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+}
+
+/* A Imagem do Dashboard */
+.dashboard-img-3d {
+  position: absolute;
+  top: 10px; 
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: cover;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* A Base (Teclado deitado na mesa) */
+.laptop-keyboard-3d {
+  position: absolute;
+  top: 100%; /* Fixado na base da tela */
+  left: -2%; /* Pouco maior para dar realismo da dobradiça */
+  width: 104%;
+  height: 200px;
+  background: linear-gradient(to bottom, #e5e7eb 0%, #9ca3af 100%);
+  border-radius: 0 0 16px 16px;
+  transform-origin: top;
+  /* A Mágica do CSS: Dobra a base em 75 graus (Abrindo o notebook) */
+  transform: rotateX(75deg); 
+  box-shadow: 0 40px 50px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  z-index: 1;
+}
+
+/* O Teclado Falso (Grade CSS) */
+.laptop-keys {
+  width: 85%;
+  height: 90px;
+  background-color: #1f2937; /* Fundo do teclado */
+  border-radius: 4px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+  /* Desenha as teclas usando gradiente (sem precisar de imagens) */
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+/* O Touchpad */
+.laptop-touchpad {
+  width: 32%;
+  height: 48px;
+  margin-top: 15px;
+  background-color: #cbd5e1;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Responsividade Desktop */
+@media (min-width: 992px) {
+  .portal-layout-enterprise {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
