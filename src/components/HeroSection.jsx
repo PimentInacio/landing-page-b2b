@@ -1,6 +1,6 @@
 import { CheckCircle2 } from 'lucide-react';
 
-export default function HeroSection({ onOpenModal }) {
+export default function HeroSection() { // Removida a prop onOpenModal
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -16,9 +16,14 @@ export default function HeroSection({ onOpenModal }) {
           Você indica para seu cliente comprar nosso eSIM, fatura alto com comissões e nossa equipe cuida de todo o resto. Temos responsabilidade com todo o atendimento do cliente desde as dúvidas no atendimento até o suporte pós-venda.
         </p>
         
-        <button className="btn-cta" onClick={onOpenModal}>
+        {/* Trocado de <button> para <a> com seu link */}
+        <a 
+          href="https://partners.esims.com.br/auth/signup" 
+          className="btn-cta"
+          style={{ textDecoration: 'none', display: 'inline-block' }}
+        >
           Quero me afiliar e lucrar agora
-        </button>
+        </a>
 
         <div className="hero-benefits">
           <span><CheckCircle2 size={18} color="#10B981"/> Custo zero de adesão</span>
